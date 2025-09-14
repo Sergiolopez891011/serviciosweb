@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servicios Web - Conceptos y Aplicaciones</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <nav>
+    <a href="#" data-target="conceptos">Conceptos</a>
+    <a href="#" data-target="soap">SOAP</a>
+    <a href="#" data-target="tipos">Tipos</a>
+    <a href="#" data-target="protocolos">Protocolos</a>
+    <a href="#" data-target="aplicaciones">Aplicaciones</a>
+    <a href="#" data-target="casos">Casos de Estudio</a>
+    <a href="#" data-target="referencias">Referencias</a>
+  </nav>
+
+  <div class="content">
+    <header>
+      <h1>Servicios Web</h1>
+      <p>Conceptos, Arquitectura, Protocolos y Aplicaciones</p>
+    </header>
+
+    <section id="conceptos" class="active">
+      <h2>Definición y conceptos clave de los servicios web</h2>
+      <p>Los servicios web son aplicaciones de software que permiten la comunicación e interoperabilidad entre sistemas diferentes, usando protocolos abiertos como HTTP y formatos estándar como XML o JSON.</p>
+    </section>
+
+    <section id="soap">
+      <h2>Principios de la Arquitectura Orientada a Servicios (SOAP)</h2>
+      <p>SOAP es un estilo de arquitectura que organiza el software en servicios independientes, reutilizables y de bajo acoplamiento. Sus principios clave incluyen interoperabilidad, escalabilidad y flexibilidad.</p>
+      <p><strong>Beneficios:</strong> integración más ágil, reducción de costos, reutilización de servicios.</p>
+      <p><strong>Desafíos:</strong> seguridad, gobernanza de servicios, complejidad en la gestión.</p>
+    </section>
+
+    <section id="tipos">
+      <h2>Tipos de Servicios Web</h2>
+      <ul>
+        <li><strong>SOAP:</strong> Protocolo basado en XML, más rígido pero muy estandarizado.</li>
+        <li><strong>REST:</strong> Arquitectura ligera basada en HTTP, ampliamente usada en APIs modernas.</li>
+      </ul>
+    </section>
+
+    <section id="protocolos">
+      <h2>Protocolos y Estándares Relacionados</h2>
+      <ul>
+        <li><strong>HTTP:</strong> Protocolo base de comunicación.</li>
+        <li><strong>XML:</strong> Estructuración de datos.</li>
+        <li><strong>JSON:</strong> Intercambio ligero de datos.</li>
+        <li><strong>WSDL:</strong> Descripción de servicios.</li>
+        <li><strong>UDDI:</strong> Directorio de servicios web.</li>
+      </ul>
+    </section>
+
+    <section id="aplicaciones">
+      <h2>Ejemplos de Aplicaciones</h2>
+      <ul>
+        <li><strong>Finanzas:</strong> Pasarelas de pago, banca digital.</li>
+        <li><strong>Salud:</strong> Historia clínica electrónica.</li>
+        <li><strong>Comercio electrónico:</strong> APIs de inventario y envíos.</li>
+        <li><strong>Gobierno:</strong> Servicios ciudadanos en línea.</li>
+      </ul>
+    </section>
+
+    <section id="casos">
+      <h2>Análisis de Casos de Estudio</h2>
+      <p>Empresas como <strong>Amazon</strong> (AWS), <strong>Google</strong> (APIs) y gobiernos digitales han demostrado cómo los servicios web permiten integrar plataformas, mejorar la experiencia del usuario y optimizar costos.</p>
+    </section>
+
+    <section id="referencias">
+      <h2>Referencias</h2>
+      <ul>
+        <li>Allamaraju, S. (2010). <em>RESTful Web Services Cookbook</em>. O'Reilly Media.</li>
+        <li>Erl, T. (2005). <em>Web Services: Concepts, Architectures and Applications</em>. Prentice Hall.</li>
+        <li>Erl, T. (2009). <em>SOA Design Patterns</em>. Prentice Hall.</li>
+        <li>Hohpe, G., & Woolf, B. (2003). <em>Enterprise Integration Patterns</em>. Addison-Wesley.</li>
+        <li>Newman, S. (2015). <em>Building Microservices</em>. O'Reilly Media.</li>
+        <li><a href="https://www.restapitutorial.com/" target="_blank">REST API Tutorial</a></li>
+        <li><a href="https://www.tutorialspoint.com/soap/" target="_blank">SOAP Tutorial</a></li>
+        <li><a href="https://www.w3schools.com/xml/xml_services.asp" target="_blank">W3Schools - Web Services</a></li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Servicios Web | Página de referencia académica</p>
+    </footer>
+  </div>
+
+  <script>
+    document.querySelectorAll("nav a").forEach(link => {
+      link.addEventListener("click", e => {
+        e.preventDefault();
+        let target = e.target.getAttribute("data-target");
+
+        document.querySelectorAll("section").forEach(sec => {
+          sec.classList.remove("active");
+        });
+
+        document.getElementById(target).classList.add("active");
+      });
+    });
+  </script>
+</body>
+</html>
